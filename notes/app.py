@@ -985,7 +985,7 @@ with ui.navset_pill_list(id="selected_navset_pill_list", widths=(3, 9), well=Fal
                     fig, ax = plt.subplots()
                     xs = np.arange(0, 1.01, 0.01)
                     ys = np.polyval(coef, xs)
-                    ax.plot(xs, ys, color='m', linewidth=1.5, alpha=0.8,)
+                    ax.plot(xs, ys, color='m', linewidth=1.5, alpha=0.8, label='SRF')
                     if displays[0] in input.polyreg_displays():
                         ax.scatter(train['x'], train['y'], 
                                    color='b', alpha=0.4, label='Training data')
@@ -1008,10 +1008,6 @@ with ui.navset_pill_list(id="selected_navset_pill_list", widths=(3, 9), well=Fal
 
                     return fig
 
-
-    # with ui.nav_panel("Predictive Modeling: Classification"):
-    #     ui.markdown('Under development.')
-    
     with ui.nav_panel("About"):
         ui.markdown('Under development.')
 
